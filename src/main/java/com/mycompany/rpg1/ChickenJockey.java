@@ -6,12 +6,12 @@ public class ChickenJockey {
     private int vida;
     private int dano;
     
-    //Construtor
+//Construtor
 public ChickenJockey(String nome) {
     this.nome = nome;
     vida = 250;
     dano = 10;
-}//Método 1
+}
 
 public String getNome() {
     return nome;
@@ -21,23 +21,24 @@ public int getVida() {
     return vida;
 }//getVida
 
-    public int getDano() {
-        return dano;
+public int getDano() {
+    return dano;
 }//getDano
 
 public void TomarPorrada(int dano) {
     vida = vida - dano;
     if(vida <= 0) {
-        System.out.println(nome + "Morreu");
+        System.out.println(nome + " morreu");
     }
     else {
-        System.out.println(nome + "possui" + vida);
+        System.out.println(nome + " possui " + vida);
     }
 }
-    public void Bater(Guerreiro NobruzeiraApelao) {
-        if(vida > 0 && NobruzeiraApelao.getVida() > 0) {
-            System.out.println(nome + " atacou " + NobruzeiraApelao.getNome() + "!");
-                NobruzeiraApelao.TomarPorrada(dano);
-}
+
+public void Bater(Guerreiro NobruzeiraApelao) {
+    if(vida > 0 && NobruzeiraApelao.getVida() > 0) {
+        System.out.println(nome + " atacou " + NobruzeiraApelao.getNome() + "!");
+        NobruzeiraApelao.TomarPorrada(dano);
     }
+}
 }
